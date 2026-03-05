@@ -4,7 +4,7 @@
 Este projeto é um site de academia, uma landing page para apresentar a academia, permitindo ver os planos da academia, as aulas, endereço fictício, contato e Nossas Aulas.
 
 ## 🚀 Status do Projeto
-Status: Em Desenvolvimento 🚧
+Status: Pronto 
 
 ## 💻 Tecnologias Utilizadas até agora:
 - Frontend: HTML, CSS, JavaScript.
