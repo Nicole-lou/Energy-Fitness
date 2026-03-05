@@ -8,7 +8,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-family: 'Anton', sans-serif;
-    padding-top: 80px; /* evita conteúdo escondido pelo navbar fixo */
+    padding-top: 80px; 
     background-size: cover;
     display: flex; 
     flex-direction: column; 
@@ -23,21 +23,20 @@ body {
     --color-text: #ffffff;
     --color-accent: #5a5557;
     --color-subtext: #1b1919;
-    /* variável auxiliar para ajustar se necessário */
     --navbar-height: 80px;
 }
 
-/* Ajustes para fixed navbar e âncoras */
+
 html {
     scroll-padding-top: var(--navbar-height);
 }
 
-/* Garantir que o body respeite o navbar fixo (já presente) */
+
 body {
     padding-top: var(--navbar-height);
 }
 
-/* Navbar styles */
+
 .navbar {
     background-color: var(--color-secondary) !important;
 }
@@ -124,24 +123,16 @@ body {
 }
 
 @media (max-width: 992px) {
-    /* Ajuste para o Título (H1) */
-    .Banner h1 {
-        /* Diminuir a fonte drasticamente para caber */
-        font-size: 1.6rem; 
-        
-        /* Ajustar a posição para que o H1 não fique muito baixo */
+    
+    .Banner h1 {     
+        font-size: 1.6rem;      
         top: 50%; 
     }
 
-    /* Ajuste para o Parágrafo (P) */
-    .Banner p {
-        /* Diminuir a fonte */
-        font-size: 0.95rem;
-        
-        /* Afastar o P do H1 o suficiente para não sobrepor */
+    
+    .Banner p {    
+        font-size: 0.95rem;    
         top: 65%; 
-        
-        /* Reduzir a largura máxima para se adequar a telas estreitas */
         max-width: 90%; 
     }
 }
@@ -220,7 +211,6 @@ body {
 
 /* Ícones dos cards */
 .card-feature .card-body {
-    /* Forçar alinhamento à esquerda dentro do corpo do card para que título e ícone comecem no mesmo ponto */
     align-items: flex-start;
 }
 
@@ -229,18 +219,16 @@ body {
     height: auto;
     display: block;
     margin-bottom: 0.5rem;
-    align-self: flex-start; /* garante que o ícone fique alinhado ao início do conteúdo */
-    margin-left: 0.6rem; /* pequena indentação para ficar próximo do início do título */
+    align-self: flex-start; 
+    margin-left: 0.6rem; 
 }
 
-/* Filtrar/tintar o ícone para as cores desejadas */
+
 .icon-subtext {
-    /* tornar o ícone escuro (próximo de --color-subtext) */
     filter: grayscale(1) brightness(0) saturate(100%);
 }
 
 .icon-accent {
-    /* aproximar para --color-accent; valores heurísticos */
     filter: grayscale(1) sepia(1) saturate(300%) hue-rotate(200deg) brightness(0.6);
 }
 
@@ -281,7 +269,7 @@ body {
     line-height: 1.4;
 }
 
-/* Botão com a mesma aparência do carrossel, sem posicionamento absoluto */
+
 .banner-btn {
     font-family: "Anton", sans-serif;
     font-size: 1.2rem;
@@ -354,13 +342,13 @@ body {
     gap: 2rem;
 }
 
-/* Em telas médias (md) ou maiores, cards ficam lado a lado */
+
 @media (min-width: 768px) {
     .personal-container {
         flex-direction: row;
     }
     .personal-box {
-        width: 340px; /* Largura fixa em desktop para manter tamanhos iguais */
+        width: 340px; 
     }
 }
 
@@ -373,8 +361,8 @@ body {
     border-radius: 8px;
     background: transparent;
     transition: transform 0.3s ease;
-    width: 100%; /* Ocupa toda largura em mobile */
-    max-width: 340px; /* Limita largura máxima mesmo em mobile */
+    width: 100%; 
+    max-width: 340px; 
 }
 
 .personal-box:hover {
@@ -481,11 +469,11 @@ body {
 
 @media (min-width: 768px) {
     .plan-card .card-body {
-        min-height: 360px; /* keep visual balance between cards in desktop */
+        min-height: 360px;
     }
 }
 
-/* Botão do card destacado: texto na cor --color-text */
+
 .plan-card--highlight .banner-btn {
     color: var(--color-text);
     border-color: var(--color-secondary);
@@ -546,7 +534,7 @@ body {
     font-family: 'Anton', sans-serif;
     color: var(--color-text);
     padding: 2rem 0;
-    margin-top: auto; /* Push footer to bottom if content is short */
+    margin-top: auto; 
 }
 
 .site-footer h4 {
@@ -572,7 +560,7 @@ body {
 }
 
 .footer-links ul li {
-    margin-bottom: 0.6rem; /* spacing similar to other nav lists */
+    margin-bottom: 0.6rem; 
 }
 
 .footer-copy {
@@ -589,18 +577,16 @@ body {
     }
 }
 
-/* ===== Responsividade e ajustes de espaçamento adicionais ===== */
 
-/* Imagens e ícones responsivos por padrão */
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* Banner / Carrossel: posicionamento mais robusto para todos os tamanhos */
+
 .carousel-item.Banner {
-    position: relative; /* tornar o item referência para posicionamento absoluto do texto */
+    position: relative; 
 }
 .carousel-item.Banner > div {
     position: absolute;
@@ -613,7 +599,7 @@ img {
     max-width: 1100px;
 }
 
-/* remover posicionamentos absolutos individuais para evitar sobreposição em telas pequenas */
+
 .Banner h1,
 .Banner p,
 .Banner button {
@@ -623,14 +609,14 @@ img {
     transform: none;
 }
 
-/* Ajuste de iframe do mapa para ser fluido */
+
 .map-container iframe {
     width: 100%;
     height: 300px;
     max-width: 100%;
 }
 
-/* Ajustes gerais de espaçamento para containers e botões */
+
 .container {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -641,12 +627,12 @@ img {
     margin-top: 0.6rem;
 }
 
-/* Cards e planos: garantir boa leitura em telas pequenas */
+
 .plan-card .card-body {
-    min-height: unset; /* permitir natural flow em telas pequenas */
+    min-height: unset; 
 }
 
-/* Personal trainers: garantir responsividade e espaçamento */
+
 .personal-container {
     gap: 1.5rem;
 }
@@ -654,13 +640,13 @@ img {
     padding: 1.25rem;
 }
 
-/* Footer: melhorar espaçamento em telas pequenas */
+
 .site-footer {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
 }
 
-/* ===== Breakpoints ===== */
+
 @media (max-width: 1200px) {
     .Banner h1 { font-size: 2rem; }
     .Banner p { font-size: 0.98rem; }
@@ -671,7 +657,7 @@ img {
     .Banner p { font-size: 0.95rem; }
     .Banner button { font-size: 0.95rem; padding: 7px 10px; }
 
-    /* Tornar os cards com largura completa quando necessário e com espaçamento */
+    
     .row.justify-content-center.gap-5 > .col-12.col-md-5,
     .row.justify-content-center.gap-5 > .col-12.col-md-4 {
         flex: 0 0 100%;
@@ -710,7 +696,7 @@ img {
     .map-container iframe { height: 200px; }
 }
 
-/* pequenas melhorias para esconder scrollbars feias em mobile */
+
 @supports (-webkit-overflow-scrolling: touch) {
     ::-webkit-scrollbar { width: 6px; }
 }
